@@ -1,0 +1,12 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .card {
+    padding: 2rem;
+  }
+  
+  .card-body {
+    padding:1rem;
+  }

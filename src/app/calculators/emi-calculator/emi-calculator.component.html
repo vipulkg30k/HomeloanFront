@@ -1,0 +1,38 @@
+<div class="container-fluid" >
+  
+  <div class="row" style="margin-top:5%">
+    <div class="col-sm-8 "><img src="https://abcscprod.azureedge.net/-/media/Project/ABCL/Internal_Images_526x230/526x230/HF/TOPIC_21_-_What_is_home_loan_calculator_526_230_F_HF_105.ashx?revision=5ed6ae4b-9f20-464f-82a8-2626d7c201ba&modified=20200804125528" alt="" style="width: 100%; height:100%;left:0; bottom: 0; "></div>
+    <div class="col-sm-4"><form #emiForm="ngForm" (ngSubmit)="onSubmit(emiForm.value)">
+      <div class="form-group"style="margin-top: 15%">
+        <label for="loanAmount"style="margin-left: 35%"><b>Loan Amount</b></label>
+        <input type="number" style="margin-left: 25%" class="form-control mb-4" name="loanAmount" [ngModel]="loanAmount" />
+      </div>
+      <div class="form-group">
+        <label for="tenureInMonths"style="margin-left: 35%"><b>Tenure in Months</b></label>
+        <input type="number" style="margin-left: 25%"class="form-control mb-4" name="tenureInMonths" [ngModel]="tenureInMonths" />
+      </div>
+      
+      <button type="submit" class="btn btn-primary mb-4" style="margin-left: 35%">Calculate</button>
+      <div *ngIf="emi" class="card">
+        <div class="card-body">
+          <h3 class="card-title">
+            EMI is &#8377; {{ emi }}
+          </h3>
+        </div>
+      </div>
+      <div *ngIf="emi" class="mt-4">
+      
+      </div>
+    </form></div>
+    
+  </div>
+</div>
+<div class="footer" style="position:absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: black;
+color: white;
+text-align: center;">
+  <p><b>Home Loans </b>@8.5% p.a. onwards<br>Your DREAM HOME JUST A LITTLE AWAY FROM YOU WITH US</p>
+</div>

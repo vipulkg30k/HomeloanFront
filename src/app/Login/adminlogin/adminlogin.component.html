@@ -1,0 +1,65 @@
+
+<body background=""style="width:100%">
+<div class="container" style="
+margin-top: 5%;
+text-align: center;">
+  <h2>Admin LogIn</h2>
+  <br>
+  <form  #loginform="ngForm" (ngSubmit)="adminlogin()" class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2 "  for="userId"><b>Admin Id</b></label>
+      <div class="col-sm-4"style="margin-left:35%;" >
+        <input type="number" class="form-control" style="text-align: center;"  placeholder="Enter Admin Id" name="userId" [(ngModel)]="admin.adminId"
+        required  #adminId="ngModel" [class.is-invaild]="adminId.invalid && adminId.touched"  >
+         <small class="text-danger" [class.d-none]="adminId.valid || adminId.untouched">Admin Id is required field</small>
+        
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="control-label col-sm-2 " for="userName"><b>Admin User Name</b></label>
+      <div class="col-sm-4" style="margin-left:35%;">
+        <input type="text" class="form-control" style="text-align: center;"   placeholder="Enter Admin user Name" name="userName" [(ngModel)]="admin.userName"
+        
+         required #adminUS="ngModel" [class.is-invaild]="adminUS.invalid && adminUS.touched">
+          <small class="text-danger" [class.d-none]="adminUS.valid || adminUS.untouched">Admin User Name is required field</small>
+        
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd"><b>Password</b></label>
+      <div class="col-sm-4" style="margin-left:35%;">          
+        <input type="password" class="form-control" style="text-align: center;"   placeholder="Enter password" name="pwd" [(ngModel)]="admin.password"
+        required #adminP="ngModel" [class.is-invaild]="adminP.invalid && adminP.touched">
+        <small class="text-danger" [class.d-none]="adminP.valid || adminP.untouched">Admin Password is required field</small>
+        </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox" name="remember"> Remember me</label>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="form-group"style="margin-left:15%;">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-info">Log In</button>
+      </div>
+    </div>
+  </form>
+ </div>
+
+ <div class="footer" style="position:absolute;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: black;
+ color: white;
+ text-align: center;">
+   <p><b>Home Loans </b>@8.5% p.a. onwards<br>Your DREAM HOME JUST A LITTLE AWAY FROM YOU WITH US</p>
+ </div>
+</body>
+
+

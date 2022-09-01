@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+
+
+<body>   
+    <div id="user-dash" [align]="'center'"> 
+        <h4>Loan Application Status</h4>
+       
+  </div>
+  <div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Application Id</th>
+                <th>User Id</th>
+                <th>Loan Amount</th>
+                <th>Application Status</th>
+                
+            </tr>
+        </thead>
+
+        <tbody>
+           <!-- <tr  *ngFor = "let a of applicationList"  > -->
+<tr>
+                <td> {{this.applicationList.applicationId}}</td>
+                <td>{{this.applicationList.user.userId}}</td>
+                <td>{{this.applicationList.loanAmount}}</td>
+                <td>{{this.applicationList.status}}</td> 
+               
+
+                
+           
+
+               
+             </tr> 
+        </tbody>
+    </table>
+
+  </div>
+</body>

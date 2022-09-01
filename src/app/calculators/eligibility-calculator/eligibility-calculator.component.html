@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+  <div class="row">
+    <div class="col-sm-4 " style="background-color:whitesmoke;">
+      <form #eligibilityForm="ngForm" (ngSubmit)="onSubmit(eligibilityForm.value)">
+        <div class="form-group" style=" margin-top:40%;">
+          <label for="monthlyIncome"style="margin-left: 35%;"><b>Monthly Income</b></label>
+          <input type="number" class="form-control mb-4" style="margin-left: 25%;" name="monthlyIncome" [ngModel]="monthlyIncome"/>
+        </div>
+        <button type="submit" class="btn btn-primary mb-4" style="margin-left: 35%; ">Calculate</button>
+        <div *ngIf="">
+        </div>
+        <div *ngIf="eligibileLoanAmount" class="card">
+          <div class="card-body">
+            <h3 class="card-body">Your Home Loan Eligibility is &#8377; {{ eligibileLoanAmount }}</h3>
+          </div>
+        </div>
+        <div *ngIf="eligibileLoanAmount" class="mt-4">
+        
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-8" style="background-color:lavenderblush; "><img src="https://assets-news.housing.com/news/wp-content/uploads/2022/06/13154005/Home-loan-eligibility-calculator-feature-compressed.jpg" alt="" style="width: 100%; "></div>
+  </div>
+  <div class="footer" style="position:absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;">
+    <p><b>Home Loans </b>@8.5% p.a. onwards<br>Your DREAM HOME JUST A LITTLE AWAY FROM YOU WITH US</p>
+  </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+

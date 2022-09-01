@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+
+<body background="https://i0.wp.com/carrickswan.com/wp-content/uploads/2016/04/site-background.jpg?ssl=1">   
+    <div id="admin-div" [align]="'center'"> 
+        <h4>Loan Applications</h4>
+        <!-- <div class="container" >
+            <div class="switch" >
+                <div class="register" (click)="onClick('pending')" [ngClass]="{active:status=='pending'}">Pending</div>
+                <div class="register" (click)="onClick('approved')" [ngClass]="{active:status=='approved'}">Approved</div>
+                <div class="register" (click)="onClick('rejected')" [ngClass]="{active:status=='rejected'}">Rejected</div>
+            </div>
+        </div> -->
+  </div>
+  <div>
+    <Table class="table table-striped" align="center">
+        <thead>
+            <tr>
+                <th>Application Id</th>
+                <th>Loan Amount</th>
+                <th>Tenure</th>
+                <th>Status</th>
+                <th>User Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Id</th>
+                <th>Aadhar No.</th>
+                <th>Pan No.</th>
+
+               
+              
+            </tr>
+        </thead>
+
+        <tbody>
+           <tr  *ngFor = "let a of applicationList; let i=index;"  >
+
+                <td> {{a.applicationId}}</td>
+                <td> {{a.loanAmount}}</td>
+                 <td> {{a.tenure}}</td>
+                <td> {{a.status}}</td>
+                <td> {{a.user.userId}}</td>
+                <td>{{ a.user.firstName }}</td>
+                <td>{{ a.user.lastName }}</td>
+                <td>{{ a.user.email }}</td>
+                <td>{{ a.user.aadharNo}}</td>
+                <td>{{ a.user.panNo }}</td>
+                
+
+                <button style="background-color: #15b056f0;" [type]="'submit'" (click)="updateStatus(a.applicationId)">approve</button>
+            
+                <button style="background-color: #cd1741f0;" [type]="'submit'" (click)="updateStatus1(a.applicationId)">reject</button>
+            
+
+               
+            </tr>
+        </tbody>
+    </Table>
+
+  </div>
+</body>

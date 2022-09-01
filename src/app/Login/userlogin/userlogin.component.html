@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+
+    <div class="login-wrapper">
+      <form class="form" #userLoginForm="ngForm" (ngSubmit)="onSubmit(userLoginForm.value)">
+        <h2>User Login</h2>
+        <div class="input-group">
+          <input type="text" id="loginUser" class="form-control mb-4" name="email" [ngModel]="email" required #adminId="ngModel"
+          [class.is-invaild]="adminId.invalid && adminId.touched">
+          <label for="email">Email</label>
+          <small class="text-danger" [class.d-none]="adminId.valid || adminId.untouched">User Id is required
+            feild</small>
+        </div><br>
+
+        <div class="input-group">
+          <input type="password" id="loginPassword" class="form-control mb-4" name="password" [ngModel]="password" required
+          #adminId="ngModel" [class.is-invaild]="adminId.invalid && adminId.touched">
+          <label for="password">Password</label>
+          <small class="text-danger" [class.d-none]="adminId.valid || adminId.untouched">password is required
+            feild</small>
+        </div>
+        <a mat-button routerLink="forgotpassword">forget password</a>
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+    </div>
